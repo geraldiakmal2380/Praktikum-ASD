@@ -1,4 +1,5 @@
 //ini yang royalgarden
+
 public class Pertanyaan4 {
     
     public static void main(String[] args) {//ini fungsi main
@@ -26,8 +27,8 @@ public class Pertanyaan4 {
         */
 
     }
-    //fungsi ke dua :)))
-    public static void fungsimenghitungtotalharga(int[][] royalgarden){
+   
+    public static void fungsimenghitungtotalharga(int[][] royalgarden){ //fungsi ke dua :)))
         String[] namatoko={"Royalgarden1","Royalgarden2","Royalgarden3","Royalgarden4"} ;
         int hargaaglonema = 75000,hargakeladi = 50000,hargaAlocasia=60000,hargaMawar=10000;
 
@@ -49,9 +50,22 @@ public class Pertanyaan4 {
         }
         
     } 
-    //fungsi ke 3
-    public static void fungsimenghitungtotalhargaroyalgarden4yangtanamannyaadayangmati(int[][] adatanamanyangmati){
-        
+    
+    public static void fungsimenghitungtotalhargaroyalgarden4yangtanamannyaadayangmati(int[][] adatanamanyangmati){//fungsi ke 3
+        int hargaaglonema = 75000,hargakeladi = 50000,hargaAlocasia=60000,hargaMawar=10000;
+        System.out.println("==========================================================================");
+        System.out.println("jumlah stock bunga yang ada di royalgarden4 adalah : ");
+        //stok mula2 sebelum ada yang meninggal
+        System.out.printf("%-15s %-15s %-15s %-15s %n","Aglonema","keladi","Alocasia","Mawar");
+        System.out.printf("%-15d %-15d %-15d %-15d %n",adatanamanyangmati[3][0],adatanamanyangmati[3][1],adatanamanyangmati[3][2],adatanamanyangmati[3][3]);
+        //tapi ada yang mati jadi stok nya ngurang :(
+        System.out.println("tetapi beberapa bunga ada yang mati :(");
+        System.out.println("Jadi stock berkurang (Aglonema -1, Keladi -2, Alocasia -0, Mawar -5)");
+        System.out.println("jumlah ulang stock bunga yang ada di royalgarden4 adalah : ");
+        System.out.printf("%-15s %-15s %-15s %-15s %n","Aglonema","keladi","Alocasia","Mawar");
+        System.out.printf("%-15d %-15d %-15d %-15d %n",adatanamanyangmati[3][0]-1,adatanamanyangmati[3][1]-2,adatanamanyangmati[3][2],adatanamanyangmati[3][3]-5);
+        System.out.println("Maka dari itu jumlah keuntungan dari semua bunga royalgarden4 adalah : Rp"+(((adatanamanyangmati[3][0]-1)*hargaaglonema)+((adatanamanyangmati[3][1]-1)*hargakeladi)+((adatanamanyangmati[3][2]-1)*hargaAlocasia)+((adatanamanyangmati[3][3]-1)*hargaMawar)));
+
     }   
     
 }

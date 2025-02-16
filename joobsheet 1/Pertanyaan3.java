@@ -70,7 +70,8 @@ public class Pertanyaan3 {
         for(int i=0;i<=7;i++){
              rata2ipk += arraynilai_ipk[i];
         }
-        System.out.println("Rata-rata IPK adalah : "+rata2ipk/7);
+        System.out.println("Rata-rata IPK adalah : "+rata2ipk/8);
+        mlebu.close();
         //menurut saya kurang efisien yg di bawah
         /* 
         arraynilai[1]= mlebu.nextInt();
