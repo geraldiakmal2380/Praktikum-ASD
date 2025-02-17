@@ -17,9 +17,26 @@ public class Pertanyaan5 {//array plat nomor dan input volume kubus
             {'T', 'E', 'G', 'A', 'L'}
             };
 
-            char pilihan;
+            String pilihan;
 
         System.out.println("Masukan kode plat nomor : ");
+        do{
+            pilihan = yum.nextLine();//input dengan string yang akan nanti di konvert ke char
+            char pilihanchar = ((char)pilihan.toUpperCase().charAt(0));//ini proses konvert ke char
+            for(int i=0;i<kode.length;i++){//proses mencari inputan user 
+                if (pilihanchar == kode[i]) {
+                    System.out.println("Ketemu di-"+i);
+                    break;
+                }
+                else{
+                    System.out.println("Membaca ke"+i);
+                }
+            }
+
+        }while(true);
+        
+
+
 
     }
 }
