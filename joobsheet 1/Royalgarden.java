@@ -1,6 +1,6 @@
 //ini yang royalgarden
 
-public class Pertanyaan4 {
+public class Royalgarden {
     
     public static void main(String[] args) {//ini fungsi main
         int[][] royalgarden = new int[4][4];

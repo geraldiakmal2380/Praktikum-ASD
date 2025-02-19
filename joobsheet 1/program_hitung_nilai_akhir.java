@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Pertanyaan1 {
+public class program_hitung_nilai_akhir {
 
     public static void main(String[] args) {
         int nilaitugas,nilaikuis,nilaiuts,nilaiuas;    

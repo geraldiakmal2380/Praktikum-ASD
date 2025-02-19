@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Pertanyaan3 {
+public class program_hitung_ip_semester {
     public static void main(String[] args) {
         //scanner
         Scanner mlebu = new Scanner(System.in);
