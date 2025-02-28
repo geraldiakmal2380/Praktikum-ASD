@@ -1,4 +1,4 @@
-package jangandibuka;
+
 
 public class second {
     String kedua = "Ini adalah kelas ke 2";

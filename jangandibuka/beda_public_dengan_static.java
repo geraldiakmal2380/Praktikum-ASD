@@ -1,4 +1,4 @@
-package jangandibuka;
+
 
 public class beda_public_dengan_static {
     static void methodstatic(){

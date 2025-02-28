@@ -1,4 +1,3 @@
-package jangandibuka;
 
 public class experiment_membuat_class {
     int x=5;

@@ -1,69 +1,75 @@
-
-import java.util.concurrent.TimeUnit;
 import java.util.Scanner;
-
+import java.util.concurrent.CancellationException;
 
 public class program_hitung_volum_lp_kubus {
     public static void main(String[] args) {
+        Scanner mlebu =  new Scanner(System.in);
+        int pangjangrusuk=0,pilihan=0;
+        //minta masukan dari user untuk panjang rusuk dulu ya
+        pangjangrusuk = mintapanjangrusuk(pangjangrusuk);
+        
+        
+
         do{
-        System.out.println("Program menghitung Luas,volume, dan keliling kubus.");
-        System.out.println("Pencet ctrl+c untuk keluar");
-        fungsimengeprintmenuawal();//scrol ke baris 12
-        }while(true);
-    }
-
-
-    public static void fungsimengeprintmenuawal(){//
-        Scanner mlebu = new Scanner(System.in);
-        int pilihan=0;
-        int panjangrusuk=0,transfer=0;
-        System.out.println("Pilih nomor 1-4");
-        System.out.println("1. Hitung Luas Permukaan kubus");
-        System.out.println("2. Hitung Volume kubus");
-        System.out.println("3. Hitung Keliling kubus");
-        System.out.println("4. ganti panjang rusuk");
-        System.out.println("5. reset");
-        System.out.println("6.Keluar");
-        System.out.println("Panjang rusuk adalah "+panjangrusuk);
-       
-        System.out.print("Masukan pilihan anda (1-4) : ");
-        pilihan = mlebu.nextInt();     
-        switch (pilihan) {
-            case 1:
-                System.out.println(1);
-                break;
-            case 2:
-            System.out.println(2);
-                break;
-            case 3 :
-                break;
-            case 4 :
-                panjangrusuk = gantipanjangrusuk(transfer);
-                break;
-            case 5 :
-            break;
-            case 6:
-            System.exit(0);
-            break;
-
-            
-            default:
-            System.out.println("Angka yang anda masukan tidak valdi");
-            System.out.println("ulangi lagi");
-            main(null);//kembali ke fungsi main(baris ke 7)
-                break;
+            //print menu utk awalan
+            printmenu();
+            //minta inputan dari user
+            pilihan = mlebu.nextInt();
+            if(pilihan >=1 && pilihan <= 5){
+               if(pilihan ==1){
+                int Lp = hitunglp(pangjangrusuk);
+                System.out.println("Luas Permukaan adalah "+Lp);
+               }
+               else if(pilihan ==2 ){
+                int volume = hitungvolume(pilihan);
+                System.out.println("Volume dari kubus tersebut adalah "+volume);
+               }
+               else if(pilihan == 3){
+                int keliling = hitungkeliling(pangjangrusuk);
+                System.out.println("keliling dari rusuk tersebut adalah "+keliling);
+               }
+               else if(pilihan == 4){
+                main(args);
+               }
+               else if(pilihan == 5){
+                mlebu.close();
+                System.exit(0);
+               }
+            else{
+                System.out.println("Angka tidak valid");
+            }
         }
-         
-    }
-
-    static int gantipanjangrusuk(int panjangrusuk){
-        int a;
-        Scanner masukpanjangrusuk = new Scanner(System.in);
-        System.out.print("Masukan panjang rusuk : ");
-        a = masukpanjangrusuk.nextInt();
-        return a;
+    }while(true);
         
     }
-    
-    
+    public static int mintapanjangrusuk(int a){
+        Scanner mlebu = new Scanner(System.in);
+        int b = 0;
+        System.out.print("Masukan panjang rusuk : ");
+        b = mlebu.nextInt();
+        return b ;
+
+
+    }
+
+    public static void printmenu(){
+        System.out.println("Pilih Operasi ");
+        System.out.println("1.Hitung LP\n2.Hitung Volume\n3.Hitung keliling\n4.Reset\n5.Keluar");
+        System.out.print("Masukan angka : ");
+    }
+
+    public static int hitunglp(int a){
+        int lp = 6*(a*a);
+        return lp;
+
+    }
+    public static int hitungkeliling(int a){
+        int b = a*12;
+        return b;
+
+    }
+    public static int hitungvolume(int a){
+        int b = a*a*a;
+        return b;
+    }
 }
