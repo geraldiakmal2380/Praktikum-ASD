@@ -4,10 +4,10 @@ public class mahasiswa {
     String test = "===========================";
     String nama,nim,kelas;
     double ipk;
-  
-    public mahasiswa(){//gatau ini buat apa pokok gaada error
-
+    public mahasiswa(){
+        
     }
+    
     public mahasiswa(String nm,String nim,double ipk,String kls){
         nama = nm;
         this.nim = nim;

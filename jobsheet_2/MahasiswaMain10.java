@@ -19,5 +19,7 @@ public class MahasiswaMain10 {
         mahasiswa mhs2 = new mahasiswa("Geraldi Akmal","210983",3.3,"TI 1b");
         mhs2.updateipk(5);
         mhs2.tampilkaninformasi();
+
+        mahasiswa mhsgeraldi = new mahasiswa("gerdu","8288",2.4,"Ti 1b");
     }
 }
