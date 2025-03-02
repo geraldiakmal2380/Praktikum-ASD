@@ -9,11 +9,10 @@ public class MahasiswaDemo10 {
         String a;
         Scanner mlebu = new Scanner(System.in);
         Mahasiswa10[] arrayOfMahaasiswa = new Mahasiswa10[3];
+        Mahasiswa10 arraymasuk = new Mahasiswa10();
     
-       
         for(int i=0;i<arrayOfMahaasiswa.length;i++){
             
-            System.out.println(i);
             arrayOfMahaasiswa[i] = new Mahasiswa10();
             System.out.println("Masukan Data Mahasiswa ke-"+(i+1));
             System.out.print("NIM   : ");
@@ -27,7 +26,15 @@ public class MahasiswaDemo10 {
             arrayOfMahaasiswa[i].ipk = Float.parseFloat(a);//harus pakai ini tidak bisa nextFloat.Kalau pake nextfloat input koma harus pakai "," bukan "."
             System.out.println("---------------------------------------------");
         }
+        
+        for(int i=0;i<arrayOfMahaasiswa.length;i++){
+            System.out.printf("%-6s %-25s \n","NIM : ",arrayOfMahaasiswa[i].nim);
+            System.out.printf("%-6s %-25s \n","Nama: ",arrayOfMahaasiswa[i].nama);
+            System.out.printf("%-6s %-25s \n","kelas: ",arrayOfMahaasiswa[i].kelas);
+            System.out.printf("%-6s %-25s \n","IPK : ",arrayOfMahaasiswa[i].ipk);
+            System.out.println("---------------------------------------------------------------");
             
+        }  
       /*
         arrayOfMahaasiswa[0] = new Mahasiswa10();
         arrayOfMahaasiswa[0].nim = "727777777777777777";
@@ -48,14 +55,7 @@ public class MahasiswaDemo10 {
         arrayOfMahaasiswa[2].ipk = 3.9f;
         
 
-        for(int i=0;i<arrayOfMahaasiswa.length;i++){
-            System.out.printf("%-6s %-25s \n","NIM : ",arrayOfMahaasiswa[i].nim);
-            System.out.printf("%-6s %-25s \n","Nama: ",arrayOfMahaasiswa[i].nama);
-            System.out.printf("%-6s %-25s \n","kelas: ",arrayOfMahaasiswa[i].kelas);
-            System.out.printf("%-6s %-25s \n","IPK : ",arrayOfMahaasiswa[i].ipk);
-            System.out.println("---------------------------------------------------------------");
-            
-        }
+       
            */
     }
 }
