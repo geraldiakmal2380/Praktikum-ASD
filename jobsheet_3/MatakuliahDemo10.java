@@ -1,11 +1,15 @@
 package jobsheet_3;
 
+import java.util.Arrays;
 import java.util.Scanner;
+
+import jobsheet_2.mahasiswa;
 
 public class MatakuliahDemo10 {
     public static void main(String[] args) {
     Scanner mlebu = new Scanner(System.in);
     Matakuliah10[] array = new Matakuliah10[3];
+    Matakuliah10[] arraykeluar = new Matakuliah10[4];
     String kode,nama,hehe;
     int sks,jumlahjam;
 
@@ -25,14 +29,17 @@ public class MatakuliahDemo10 {
 
         array[i] = new Matakuliah10(kode, nama, sks, jumlahjam);
         
-        Matakuliah10 masuk = new Matakuliah10();
-        masuk.cetakinfo(array,i);
+        
 
     }
+    Matakuliah10 lkjasdljkad = new Matakuliah10();
+    lkjasdljkad.cetakinfo(array);
+    lkjasdljkad.tambahdata(array,arraykeluar);
+    
 
-    Matakuliah10 masuk = new Matakuliah10();
 
-    /* 
+
+   /* 
     for(int i=0;i<array.length;i++){
      System.out.println("Data mata kuliah ke-"+(i+1));
      System.out.println("kode       :  "+array[i].kode); 
