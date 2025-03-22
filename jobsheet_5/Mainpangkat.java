@@ -9,6 +9,7 @@ public class Mainpangkat {
         int elemen = mlebu.nextInt();
 
         Pangkat[]  omagat = new Pangkat[elemen];
+        Pangkat obj = new Pangkat();
 
         for(int i=0;i<elemen;i++){
             System.out.print("Masukang basis ke-"+(i+1)+": ");
@@ -22,6 +23,7 @@ public class Mainpangkat {
         for(Pangkat p:omagat){
             System.out.println(p.nilai+"^"+p.pangkat+": "+p.pangkatBF(p.nilai, p.pangkat));
         }
+        obj.printtanpaparameter();
         System.out.println("HASIL PANGKAT DIVIDE AND QONQUER");
         for(Pangkat p:omagat){
             System.out.println(p.nilai+"^"+p.pangkat+": "+p.pangkatDC(p.nilai, p.pangkat));

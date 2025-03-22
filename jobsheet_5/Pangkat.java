@@ -7,7 +7,9 @@ public class Pangkat {
         nilai =n;
         pangkat =p;
     }
+    Pangkat(){
 
+    }
     int pangkatBF(int a,int n){
         int hasil =1;
         for(int i=0;i<n;i++){
@@ -15,6 +17,8 @@ public class Pangkat {
         }
         return hasil;
     }
+    public static void printtanpaparameter(){
+        }
     int pangkatDC(int a,int n){
         if(n==1){
             return a;
