@@ -31,7 +31,7 @@ public class nilaiutsmain {
 
     }
     public static void main(String[] args) {
-
+        int rata2=0;
         nilaiuts[] erere = new nilaiuts[8];
         erere[0] = new nilaiuts("220101001", 2022, 78, 82);
         erere[1] = new nilaiuts("220101002", 2022, 85, 88);
@@ -52,6 +52,12 @@ public class nilaiutsmain {
         System.out.println("Nilai Tertinggi adalah "+nilaitertinggi);
         int nilaiterendah  = carinilaiterendah(iniarray,0,iniarray.length-1);
         System.out.println("Nilai terendah adalah  "+nilaiterendah);
+
+        //rata2 nilai semua mahasiswa uas
+        for(int i=0;i<iniarray.length;i++){
+            rata2 += iniarray[i];
+        }
+        System.out.println("Rata-rata dari nilai UAS mahasiswa adalah "+rata2/iniarray.length);
 
     }
     
