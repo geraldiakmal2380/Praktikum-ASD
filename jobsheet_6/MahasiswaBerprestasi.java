@@ -18,11 +18,13 @@ public class MahasiswaBerprestasi {
         boolean sorting = false;
         do{
             sorting = false;
-            for(int i=1;i<n-1;i++){
-                Mahasiswa tmp = listmhs[i];
-                listmhs[i] = listmhs[i-1];
-                listmhs[i-1] = tmp; 
-                sorting = true;
+            for(int i=1;i<n;i++){
+                if(listmhs[i].ipk>listmhs[i-1].ipk){
+                    Mahasiswa tmp = listmhs[i];
+                    listmhs[i] = listmhs[i-1];
+                    listmhs[i-1] = tmp; 
+                    sorting = true;
+                }  
             }
             n--;
         }while(sorting);
