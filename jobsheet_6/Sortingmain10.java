@@ -22,6 +22,7 @@ public class Sortingmain10 {
     dataurut2.selectionsort();
     System.out.println("Data sudah diurutkan dengan selection sort (ASC)");
     dataurut2.tampil();
+    System.out.println("=========================================");
 
     System.out.println("Data awal 3");
     dataurut3.tampil();

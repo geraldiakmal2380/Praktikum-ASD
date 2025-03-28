@@ -76,11 +76,25 @@ public class sorting10 {
             int temp = data[i];
             int j=i-1;
 
+            //
             while(j>=0 && data[j]>temp){
                 data[j+1] = data[j];
                 j--;
+                tampil();
             }
+            /*
+             loop 1 
+             j=0,temp = i =1
+             40>10? Y
+             data[1] = data[0]; 10 = 40;
+             j--
+             j=-1 keluar while
+             j[0] = temp = data[1] =10;
+             dst.
+             */
+            System.out.println(j);
             data[j+1]=temp;
+            
         }
     }
     void tampil(){
