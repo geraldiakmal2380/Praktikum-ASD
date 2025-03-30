@@ -26,6 +26,7 @@ public class sorting10 {
                 }
             }
         }
+        
     }
 
     void selectionsort(){

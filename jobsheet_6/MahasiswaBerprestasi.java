@@ -13,6 +13,10 @@ public class MahasiswaBerprestasi {
     }
     }
 
+    void selectionsort(){
+        
+    }
+
     void bubbleSort(){
         int n = listmhs.length;
         boolean sorting = false;
