@@ -54,6 +54,13 @@ public class MahasiswaDemo10 {
         list.bubbleSort();
         list.tampil();
 
+        System.out.println("Data yang sudah terurut menggunakan SELECTION SORT (ASC)");
+        list.selectionsort();
+        list.tampil();
+
+        System.out.println("Data yang sudah terurut menggunakan Insertion SORT (ASC)");
+        list.insertionsort();
+        list.tampil();
     }
     
 

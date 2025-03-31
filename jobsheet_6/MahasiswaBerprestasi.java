@@ -14,6 +14,19 @@ public class MahasiswaBerprestasi {
     }
 
     void selectionsort(){
+        for(int i=0;i<listmhs.length-1;i++){
+            int idxmin = i;
+            //mencari angka terkecil
+            for(int j=i+1;j<listmhs.length;j++){
+                if(listmhs[j].ipk<listmhs[idxmin].ipk){
+                    idxmin =j;
+                }
+            }
+            Mahasiswa tmp = listmhs[idxmin];
+            listmhs[idxmin] = listmhs[i];
+            listmhs[i] = tmp;
+        }
+
         
     }
 
@@ -32,6 +45,19 @@ public class MahasiswaBerprestasi {
             }
             n--;
         }while(sorting);
+    }
+
+    void insertionsort(){
+        for(int i=1;i<listmhs.length;i++){
+            Mahasiswa temp = listmhs[i];
+            int j = i ;
+            while(j>0 && listmhs[j-1].ipk<temp.ipk){
+                listmhs[j] = listmhs[j-1];
+                j--;
+            }
+            listmhs[j] = temp;
+
+        }
     }
 
     void tampil(){
