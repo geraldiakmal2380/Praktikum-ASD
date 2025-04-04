@@ -5,11 +5,14 @@ public class MahasiswaBerprestasi10 {
     int idx;
 
     void tambah(Mahasiswa10 mhs){
-
+    	listMhs[idx] = mhs;
+    	idx++;
     }
 
     void tampil(){
-
+    	for(Mahasiswa10 a : listMhs) {
+    		System.out.println(a);
+    	}
     }
 
     int sequentialsearch(double cari){

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry excluding="joobsheet 1/|jangandibuka/" kind="src" path=""/>
+	<classpathentry kind="src" path="jangandibuka"/>
+	<classpathentry kind="src" path="joobsheet 1"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

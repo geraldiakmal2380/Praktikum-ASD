@@ -13,7 +13,8 @@ public class MahasiswaDemo10 {
             Double ipk = Double.parseDouble(ip);
 
             list.tambah(new Mahasiswa10(nim,nama,kelas,ipk));
-
+            
         }
+        list.tampil();
     }
 }

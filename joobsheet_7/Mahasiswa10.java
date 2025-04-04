@@ -10,7 +10,10 @@ public class Mahasiswa10 {
 
     }
     Mahasiswa10(String nm,String name,String kls,double ip){
-
+    	nim=nm;
+    	nama = name;
+    	kelas = kls;
+    	ipk = ip;
     }
 
 }
