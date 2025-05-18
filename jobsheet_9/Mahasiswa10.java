@@ -14,11 +14,10 @@ public class Mahasiswa10 {
         this.nim = nim;
         this.nama = nama ;
         this.kelas = kelas ;
-        nilai = -1;
     }
 
-    void TugasDiNilai(){
-        this.nilai = nilai;
+    void TugasDiNilai(int asf){
+        this.nilai = asf;
 
     }
 }
