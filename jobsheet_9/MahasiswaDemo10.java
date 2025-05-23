@@ -1,7 +1,6 @@
 package jobsheet_9;
 
 import java.util.Scanner;
-import java.util.Stack;
 
 public class MahasiswaDemo10 {
     public static void main(String[] args){
@@ -72,10 +71,10 @@ public class MahasiswaDemo10 {
                 case 7 ://keluar dari program
                     System.out.println("bye");
                     perulangan = false;
+
                     break;
                 default:
                     System.out.println("Input Invalid");
-
             }
         }while (perulangan);
     }
