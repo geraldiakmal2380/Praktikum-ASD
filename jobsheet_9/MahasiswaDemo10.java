@@ -18,7 +18,7 @@ public class MahasiswaDemo10 {
             System.out.println("5. Melihat Daftar Tugas");
             System.out.println("6. Berapa banyak tugas yg dikumpulkan?");
             System.out.println("7. Keluar");
-            System.out.print("Masukan Pilihan (1/2/3/4/5) : ");
+            System.out.print("Masukan Pilihan (1/2/3/4/5/6/7) : ");
             pilihan = mlebu.nextInt();
             mlebu.nextLine();
 
@@ -42,6 +42,9 @@ public class MahasiswaDemo10 {
                         int nilai = mlebu.nextInt();
                         dinilai.TugasDiNilai(nilai);
                         System.out.printf("Nilai Tugas %s adalah %d \n",dinilai.nama,nilai);
+                        //konversi ke biner
+                        String biner = stack.KonversiDesimalKeBiner(nilai);
+                        System.out.println("Nilai biner Tugas : "+ biner);
                     }
                     break;
                 case 3:

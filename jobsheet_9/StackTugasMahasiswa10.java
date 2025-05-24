@@ -98,4 +98,18 @@ public class StackTugasMahasiswa10 {
         return hitungan;
 
     }
+
+    public String KonversiDesimalKeBiner(int nilai){
+        StackKonversi10 stack = new StackKonversi10();
+        while (nilai > 0){
+            int sisa = nilai % 2;
+            stack.push(sisa);
+            nilai = nilai /2;
+        }
+        String biner = new String();
+        while (!stack.isEmpty()){
+            biner += stack.pop();
+        }
+        return biner;
+    }
 }
