@@ -1,7 +1,6 @@
 package jobsheet_9;
 
 import java.util.Scanner;
-import java.util.Stack;
 
 public class SuratDemo10 {
     static void FungsiPrint(){
@@ -28,28 +27,32 @@ public class SuratDemo10 {
             switch (pilihan){
                 case 1:
                     idSurat++;
-                    System.out.println("Masukan Nama : ");
+                    System.out.print("Masukan Nama : ");
                     String Nama = mlebu.nextLine();
-                    System.out.println("Masukan kelas : ");
+                    System.out.print("Masukan kelas : ");
                     String Kelas = mlebu.nextLine();
-                    System.out.println("Jenis Izin ? (A/I/S): ");
+                    System.out.print("Jenis Izin ? (A/I/S): ");
                     char jenisizin = mlebu.nextLine().charAt(0);
-                    System.out.println("Berapa lama ? (hari): ");
+                    System.out.print("Berapa lama ? (hari): ");
                     int durasi = mlebu.nextInt();
-                    System.out.println("ID surat otomatis adalah "+idSurat);
-                    String StringidSurat = String.valueOf(idSurat);
+                    System.out.print("ID surat otomatis adalah "+idSurat);
+                    String StringidSurat = String.valueOf(idSurat);//konvert string ke int
                     Surat10 objectSurat = new Surat10(StringidSurat,Nama,Kelas,jenisizin,durasi);
                     stackKeSurat.push(objectSurat);//mengirim object surat ke Stacksurat
                     break;
                 case  2:
-                    //tambahi if else sesuai nanti aja lah
+                    stackKeSurat.verifikasiSurat();
                     break;
                 case 3:
+                    stackKeSurat.cekteratas();
                     break;
                 case 4:
-                stackKeSurat.printsemua();
+                    stackKeSurat.printsemua();
                     break;
                 case  5:
+                    System.out.print("Masukan nama mahasiswa : ");
+                    String inputNama = mlebu.nextLine();
+                    stackKeSurat.cariSuratBerdasarNama(inputNama);
                     break;
                 case 6:
                     System.out.println("bye");
