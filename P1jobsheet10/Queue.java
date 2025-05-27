@@ -46,8 +46,9 @@ public class Queue {
             while (i != rear){
                 System.out.println(data[i]+ " ");
                 i = (i+1) % max;
+                System.out.println(data[i]+ " ");
             }
-            System.out.println(data[i]+ " ");
+
             System.out.println("Jumlah elemen = "+size);
         }
     }
@@ -62,21 +63,26 @@ public class Queue {
         }
     }
 
-    public void Enqueue(int dt){
+    public void Enqueue(int dt){// Secara sederhana, "enqueue" berarti memasukkan elemen baru ke dalam antrean, biasanya ke bagian belakang antrean.
         if(isFull()){
             System.out.println("Queue sudah penuh");
         }else {
-            if(rear == max-1){
-                rear=0;
-            }else {
-                rear++;
+            if(isEmpty()){
+                    front = rear =0;
+            }else{
+                if(rear == max-1){
+                    rear=0;
+                }else {
+                    rear++;
+                }
             }
+
         }
         data[rear] = dt;
         size++;
     }
 
-    public int Dequeue(){
+    public int Dequeue(){//"Dequeue" dalam konteks pemrograman, terutama struktur data, berarti menghapus elemen dari bagian depan (front) dari antrean (queue).
         int dt=0;
         if(isEmpty()){
             System.out.println("Queue masih kosong");

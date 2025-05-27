@@ -19,8 +19,9 @@ public class Queuemain {
         System.out.print("Masukan kapasistas queue : ");
         int n = sc.nextInt();
         Queue q = new Queue(n);
-        menu();
+
         do{
+            menu();
             System.out.print("Masukan pilihan :  ");
             int pilihan = sc.nextInt();
             switch (pilihan){
@@ -30,6 +31,19 @@ public class Queuemain {
                     q.Enqueue(datamasuk);
                     break;
                 case 2:
+                    int datakeluar = q.Dequeue();
+                    if(datakeluar!=0){
+                        System.out.println("Data yang dikeluarkan adalah : "+datakeluar);
+                    }
+                    break;
+                case 3:
+                    q.print();
+                    break;
+                case 4:
+                    q.peek();
+                    break;
+                case 5:
+                    q.clear();
                     break;
                 default:
                     break;
