@@ -2,9 +2,9 @@ package P1jobsheet10;
 
 public class Queue {
     int[] data;
-    int front;//pointer
+    int front;//pointer yang valuenya nambah ketika ada angka dikeluarkan
     int size;//utk mengecek isEmpty
-    int rear;//pointer(Ketika max atau balik ke 0)
+    int rear;//pointer yang valuenya nambah ketika ada angka baru masuk
     int max;
 
     public Queue(int n){
@@ -82,7 +82,7 @@ public class Queue {
         if(isEmpty()){
             System.out.println("Queue masih kosong");
         }else {
-            int i = front;
+            int i = front   ;
             while (i != rear){
                 System.out.print(data[i] + " ");
                 i = (i+1) % max;
