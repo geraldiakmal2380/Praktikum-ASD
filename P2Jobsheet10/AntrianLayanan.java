@@ -3,7 +3,7 @@ package P2Jobsheet10;
 public class AntrianLayanan {
     Mahasiswa[] data;
     int front;//pointer yang valuenya nambah ketika ada angka dikeluarkan
-    int size;//utk mengecek isEmpty
+    int size;//utk mengecek isEmpty dan teman-temannya
     int rear;//pointer yang valuenya nambah ketika ada angka baru masuk
     int max;
 
@@ -27,9 +27,45 @@ public class AntrianLayanan {
 
     public Mahasiswa layaniMahasiswa(){
         if(isEmpty()){
-            //lanjutin besok
+            System.out.println("Atrian masih kosong");
+            return null;
+        }
+        //kode dibawah tidak akan dieksekusi ketika isEmpty adalah true karena sudah return null
+        Mahasiswa mhs = data[front];
+        front = (front+1)%max;
+        size--;
+        return  mhs;
+    }
+
+    public void lihatTerdepan(){
+        if(isEmpty()){
+            System.out.println("antrian kosong");
+        }
+        else {
+            System.out.println("Mahasiswa terdepan : ");
+            System.out.println("NIM - NAMA - PRODI - KELAS");
+            data[front].tampilkandata();
         }
     }
+
+    public void tampilkanSemua(){
+        if(isEmpty()){
+            System.out.println("Antrian kosong");
+        }
+        System.out.println("Daftar mahasiswa antrian : ");
+        System.out.println("NIM - NAMA - PRODI - KELAS");
+
+        for (int i = 0; i <size; i++) {
+            int index = (front+i) % max;
+            System.out.print((i+1)+".");
+            data[index].tampilkandata();
+        }
+    }
+
+    public int getJumlahAntrian(){
+        return size;
+    }
+
 
     boolean isFull(){
         if(size== max){

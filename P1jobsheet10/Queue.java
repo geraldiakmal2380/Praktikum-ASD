@@ -82,7 +82,7 @@ public class Queue {
         if(isEmpty()){
             System.out.println("Queue masih kosong");
         }else {
-            int i = front   ;
+            int i = front;
             while (i != rear){
                 System.out.print(data[i] + " ");
                 i = (i+1) % max;
