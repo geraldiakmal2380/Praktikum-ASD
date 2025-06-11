@@ -10,6 +10,7 @@ public class LayananAkademiSiakad {
         System.out.println("3. Lihat mahasiswa terdepan");
         System.out.println("4. Lihat semua antrian");
         System.out.println("5. Jumlah mahasiswa dalam antrian");
+        System.out.println("6. Cek antrian paling belakang");
         System.out.println("0. keluar");
         System.out.print("Pilih menu : ");
     }
@@ -51,6 +52,9 @@ public class LayananAkademiSiakad {
                     break;
                 case 5:
                     System.out.println("Jumlah data dalam antrian adalah "+antrian.getJumlahAntrian());
+                    break;
+                case 6:
+                    System.out.println("Sedang dikonstruksi");
                     break;
                 case 0:
                     perulangan = false;
