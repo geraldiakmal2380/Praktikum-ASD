@@ -8,7 +8,6 @@ public class SLLMain10 {
             Mahasiswa10 mhs3 = new Mahasiswa10();
             Mahasiswa10 mhs4 = new Mahasiswa10("123456789","lkjasdlk,jasdlkjasda","1b",3.14);
 
-            sll.print();
             sll.addFirst(mhs4);
             sll.print();
     }

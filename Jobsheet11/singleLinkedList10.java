@@ -15,10 +15,12 @@ public class singleLinkedList10 {
             while (tmp != null){
                 tmp.data.tampilkanInformasi();
                 tmp = tmp.next;
+
             }
             System.out.println("");
         }else {
             System.out.println("Linked list kosong");
+            System.out.println(isEmpty());
         }
     }
 
@@ -29,7 +31,7 @@ public class singleLinkedList10 {
             tail = nInput;
         }else {
             nInput.next = head;
-            tail = nInput;
+            head = nInput;//tail ganti jadi head
         }
     }
 
