@@ -60,4 +60,21 @@ public class singleLinkedList10 {
            temp = temp.next;
        }while (temp !=null);
     }
+
+    public void insertAt(int index, Mahasiswa10 input){
+        if(index <0){
+            System.out.println("Index salah");
+        }else if(index==0){
+            addFirst(input);
+        }else {
+            node10 temp = head;
+            for (int i = 0; i < index-1; i++) {
+                temp = temp.next;
+            }
+            temp.next = new node10(input,temp.next);
+            if(temp.next.next == null){
+                tail = temp.next;
+            }
+        }
+    }
 }
